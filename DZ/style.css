@@ -1,83 +1,160 @@
-html{
-    scroll-behavior: smooth;
-  }
+.product-card {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+.product-image {
+  border-radius: 10px;
+  box-shadow: 1px 2px 7px black;
+  position: absolute;
+  inset: 0;
+  top: 10px;
+  left: 50px;
+  width: 300px;
+  height: 200px;
+}
+.product-info {
+  padding: 16px;
+}
+.product-title {
+  font-family: "Exo 2";
+  position: relative;
+  top: 220px;
+  text-align: center;
+  font-size: 1.5em;
+}
+.product-description {
+  color: #666;
+}
+.product-price {
+  font-size: 1.2em;
+  color: #e74c3c;
+}
+.product-button {
+  position: relative;
+  top: 300px;
+  display: block;
+  border-radius: 20px;
+  box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.product-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
   
-  footer{
-    position: relative;
-    right: 20px;
-    width: 957px;
-    height: 50px;
-  }
-  
-  header{
-    box-shadow: 1px 2px 4px black;
-    background-image: linear-gradient(90deg,grey,rgb(58, 57, 57));
-    border-radius: 10px;
-    width: 750px;
-    position: relative;
-    left: 100px;
-    font-size: 35px;
-  }
-  .text{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-    margin-left: 100px;
-  }
-  header:hover{
-    transform: scale(1.1);
-  }
-  h1{
-    margin-top: 50px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-  }
-  p{
-    position: relative;
-    bottom: 100px;
-    margin-bottom: 100px;
-    text-align: center;
-    font-size: 60px;
-  }
-  img{
-    border-radius: 20px;
-    box-shadow: 1px 2px 4px black;
-    position: relative;
-    left: 120px;
-    bottom: 150px;
-    height: 350px;
-    width: 700px;
-  }
-  .text1{
-    position: relative;
-    bottom: 100px;
-    margin-top: 20px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-  }
-  .text2{
-    position: relative;
-    bottom: 200px;
-    margin-bottom: 100px;
-    text-align: center;
-    font-size: 60px;
-  }
-  .text3{
-    position: relative;
-    bottom: 250px;
-    margin-top: 20px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-  }
-  .contact{
-    position: relative;
-    bottom: 250px;
-    background-image: linear-gradient(90deg, rgb(56, 56, 56),grey);
-  }
-  .textContact{
-    margin-top: 20px;
-    margin-left: 20px;
-    color: white;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-  }
+}
+.product-info h2 {
+  margin: 0 0 10px;
+}
+.product-info p {
+  margin: 0 0 15px;
+}
+.product-info .price {
+  font-weight: bold;
+  color: #e74c3c;
+}
+.product-info .description {
+  font-size: 0.9em;
+} 
+.price{
+  position: relative;
+  top: 260px;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Exo 2";
+}
+span{
+  font-size: 25px;
+  font-family: "Coming Soon";
+}
+.favourite{
+  box-shadow: 1px 2px 7px black;
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  border-radius: 100px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.favourite:hover{
+  transform: scale(1.1);
+}
+
+.basket{
+  display: none;
+  background-color: white;
+  border-radius: 5px;
+  height: 200px;
+  width: 300px;
+  inset: 0;
+  bottom: 800px;
+  margin: auto;
+  position: fixed;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-name: basket;
+  box-shadow: 1px 1px 6px black;
+}
+
+@keyframes basket {
+    0%{
+    bottom: 1700px; 
+    }
+    50%{
+    top: 5px;  
+    }
+    100%{
+    top: 10px;
+    }
+}
+
+
+.close{
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  border: 2px solid black;
+}
+
+.close:hover{
+  transform: scale(1.1);
+}
+
+.close-icon{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+}
+
+.favourite-image{
+  position: absolute;
+  inset: 0;
+  height: 40px;
+  width: 40px;
+}

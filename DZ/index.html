@@ -3,130 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Карточка товара красивый дизайн</title>
+  <title>Карточка товара</title>
   <link rel="stylesheet" href="style.css"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet"> 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite" />
+  <script src="scripts.js"></script>
 </head>
 <body>
-  <style>
-    .product-card {
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      width: 400px;
-      height: 500px;
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      font-family: Arial, sans-serif;
-    }
-    .product-image {
-      position: absolute;
-      inset: 0;
-      top: 10px;
-      left: 50px;
-      width: 300px;
-      height: 200px;
-    }
-    .product-info {
-      padding: 16px;
-    }
-    .product-title {
-      font-family: "Exo 2";
-      position: relative;
-      top: 220px;
-      text-align: center;
-      font-size: 1.5em;
-    }
-    .product-description {
-      color: #666;
-    }
-    .product-price {
-      font-size: 1.2em;
-      color: #e74c3c;
-    }
-    .product-button {
-      position: relative;
-      top: 300px;
-      display: block;
-      border-radius: 20px;
-      box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
-      width: 100%;
-      padding: 10px;
-      font-size: 20px;
-      background-color: #3498db;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-    }
-    .product-button:hover {
-      background-color: #2980b9;
-      transform: scale(1.05);
-      
-    }
-    .product-info h2 {
-      margin: 0 0 10px;
-    }
-    .product-info p {
-      margin: 0 0 15px;
-    }
-    .product-info .price {
-      font-weight: bold;
-      color: #e74c3c;
-    }
-    .product-info .description {
-      font-size: 0.9em;
-    } 
-    .price{
-      position: relative;
-      top: 260px;
-      font-size: 20px;
-      text-align: center;
-      font-family: "Exo 2";
-    }
-    span{
-      font-size: 25px;
-      font-family: "Coming Soon";
-    }
-    .favourite{
-      position: absolute;
-      top: 20px;
-      right: 60px;
-      border-radius: 100px;
-      background-color: white;
-      width: 40px;
-      height: 40px;
-      background-image: url("");
-      background-size: cover;
-      cursor: pointer;
-    }
-    .material-symbols-outlined{
-      position: relative;
-      top: 30px;
-      left: 290px;
-      
-    }
-  </style>
+    <div class="basket"  id="basket-js" >
+      <div class="close" id="close-js">
+        <img class="close-icon" src="https://img.icons8.com/?size=100&id=45&format=png&color=000000">
+      </div>
+    </div> 
     <div class="product-card">
       <div class="product-image-container">
-      <img src="https://static.tildacdn.com/tild6337-6564-4135-a666-313764383639/photo.jpg" alt="Product Image" class="product-image">
-      <div class="favourite"></div>
+        <img src="https://static.tildacdn.com/tild6337-6564-4135-a666-313764383639/photo.jpg" alt="Product Image" class="product-image">
+        <div class="favourite">
+        <img class="favourite-image" src="https://lh3.googleusercontent.com/proxy/t3bpTOCnPDGJ3HS4ZMObcFFTZMKL2hUJQwYGoJetRlrvNsC3SXY3K3NOWDmSB71SLcX1NY7tdDAm58g9EiTqTaKU-8pjPqbkAtpGXJANKCKwB8Uoeu0VgNvYlag">
+        </div>
       </div>
       <div class="product-info">
-        <h2 class="product-title">Название товара</h2>
+        <h2 class="product-title">Кофе</h2>
         <h2 class="price">Цена: <span>2$</span></h2>
         <p class="product-description"></p>
-        <button class="product-button">Добавить в корзину</button>
+        <button id="product-button-js" class="product-button">Добавить в корзину</button>
       </div>  
     </div>  
   </body>
