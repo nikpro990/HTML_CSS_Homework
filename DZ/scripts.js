@@ -5,9 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
    
    close.addEventListener("click", () =>{
      basket.style.display = "none";
-   });
+     basket.style.animationName = "basketClose";
+     basket.style.animationDuration = "0.5s";
+     basket.style.animationTimingFunction = "ease";
+     basket.style.animationIterationCount = "1";
+    });
 
    productButton.addEventListener("click", () => {
     basket.style.display = "block";
-   });
+    basket.style.animationName = "basketOpen";
+    basket.style.animationDuration = "0.5s";
+    basket.style.animationTimingFunction = "ease";
+    basket.style.animationIterationCount = "1";
+  });
 });

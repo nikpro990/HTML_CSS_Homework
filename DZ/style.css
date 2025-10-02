@@ -110,25 +110,27 @@ span{
   bottom: 800px;
   margin: auto;
   position: fixed;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-name: basket;
   box-shadow: 1px 1px 6px black;
 }
 
-@keyframes basket {
-    0%{
-    bottom: 1700px; 
-    }
-    50%{
-    top: 5px;  
-    }
-    100%{
-    top: 10px;
-    }
+@keyframes basketOpen {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+  
 }
 
+@keyframes basketClose {
+  0%{
+   transform: scale(1);
+  }
+  100%{
+   transform: scale(0);
+  }
+}
 
 .close{
   position: absolute;
@@ -157,4 +159,11 @@ span{
   inset: 0;
   height: 40px;
   width: 40px;
+}
+
+.text-coffe{
+  text-align: center;
+  font-family: "Exo 2";
+  font-size: 30px;
+  margin-top: 10px;
 }
