@@ -1,0 +1,75 @@
+.form-container{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: 600px;
+    width: 900px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px black;
+    background-image: linear-gradient(90deg, white, rgb(216, 216, 216));
+}
+
+@media(min-width: 1467px){
+    .form-container{
+        width: 1000px;
+    }
+    
+    .form-image {
+      width: 1800px;
+    }
+}
+
+.image_form-container{
+    display: flex;
+    position: relative;
+}
+
+.form-image{
+    box-shadow: 0px 0px 18px black;
+    border-radius: 50px 0px 0px 50px;
+    height: 600px;
+    width: 800px;
+}
+
+.auth_input{
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-family: "Comfortaa";
+    margin-top: 40px;
+    box-shadow: 1px 1px 6px black;
+    width: 350px;
+    margin-left: 70px;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    height: 35px;
+}
+
+.auth_input:hover{
+    box-shadow: 0px 0px 10px black;
+    transform: translateY(-6px);
+}
+
+.auth_title{
+    font-size: 35px;
+    font-family: "Comfortaa";
+    text-align: center;
+}
+
+.auth_btn{
+  position: relative;
+  left: 170px;
+  top: 100px;
+  height: 50px;
+  border: 1px solid gray;
+  background-image: linear-gradient(45deg, green, rgb(79, 238, 79));
+  color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px black;
+  transition: all 0.3s ease;
+  font-size: 30px;
+}
+
+.auth_btn:hover{
+    box-shadow: 0px 0px 10px black;
+    transform: scale(1.1);
+}

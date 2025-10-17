@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма Регистрации</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-registration">
+        <div class="form-container">
+            <div class="image_form-container">      
+                <img class="form-image" src="image/photo.png">
+                <form class="auth" action="/singup" metod="post">
+                    <h3 class="auth_title">Регистрация</h3>
+                    <label class="auth_label">
+                        <input class="auth_input" name="name" type="text" placeholder="Ваше имя" required="">
+                    </label>
+                    <label class="auth_label">
+                        <input class="auth_input" name="email" type="email" placeholder="your@mail.com" required="">
+                    </label>
+                    <label class="auth_label">
+                        <input class="auth_input" name="name" type="password" placeholder="Пароль" required="">
+                    </label>
+                    <label class="auth_label">
+                        <input class="auth_input" name="name" type="date" placeholder="Пол" required="">
+                    </label>
+                    <label class="auth_label">
+                        <input class="auth_input" name="name" type="hidden" placeholder="Пол" required="">
+                    </label>
+                    <button class="auth_btn" type="submit">Создать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
