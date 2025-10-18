@@ -12,7 +12,7 @@
 <body>
     <div class="form-registration">
         <div class="form-container">
-            <div class="image_form-container">      
+            <div class="image_form-container">
                 <img class="form-image" src="image/photo.png">
                 <form class="auth" action="/singup" metod="post">
                     <h3 class="auth_title">Регистрация</h3>
@@ -22,11 +22,14 @@
                     <label class="auth_label">
                         <input class="auth_input" name="email" type="email" placeholder="your@mail.com" required="">
                     </label>
-                    <label class="auth_label">
-                        <input class="auth_input" name="name" type="password" placeholder="Пароль" required="">
+                    <label class="auth_label password-label">
+                        <input class="auth_input" id="password" name="password" type="password" placeholder="Пароль" required="">
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <img src="image/visibility_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="Показать пароль" id="eye-icon-js" class="eye-icon">
+                        </button>
                     </label>
                     <label class="auth_label">
-                        <input class="auth_input" name="name" type="date" placeholder="Пол" required="">
+                        <input class="auth_input" name="name" type="date" placeholder="Дата рождения" required="">
                     </label>
                     <button class="auth_btn" type="submit">Создать</button>
                 </form>

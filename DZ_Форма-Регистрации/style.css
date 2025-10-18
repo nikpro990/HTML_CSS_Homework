@@ -5,8 +5,10 @@
     height: 600px;
     width: 900px;
     border-radius: 50px;
-    box-shadow: 1px 1px 10px black;
-    background-image: linear-gradient(90deg, white, rgb(216, 216, 216));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 @media(min-width: 1467px){
@@ -15,7 +17,14 @@
     }
     
     .form-image {
-      width: 1800px;
+      width: 700px;
+    }
+    .auth_input{
+        position: relative;
+        left: 30px;
+    }
+    .auth_btn{
+      left: 50px;
     }
 }
 
@@ -25,28 +34,39 @@
 }
 
 .form-image{
-    box-shadow: 0px 0px 18px black;
-    border-radius: 50px 0px 0px 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 40px 0 0 40px;
     height: 600px;
     width: 800px;
+    object-fit: cover;
 }
 
+.visible{
+   position: relative;
+   top: 5px;
+   right: 20px;
+}
+
+
 .auth_input{
-    border: 1px solid gray;
-    border-radius: 10px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
     font-family: "Comfortaa";
     margin-top: 40px;
-    box-shadow: 1px 1px 6px black;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 350px;
     margin-left: 70px;
     font-size: 30px;
     transition: all 0.3s ease;
     height: 35px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .auth_input:hover{
-    box-shadow: 0px 0px 10px black;
-    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    border-color: #bbb;
 }
 
 .auth_title{
@@ -58,18 +78,48 @@
 .auth_btn{
   position: relative;
   left: 170px;
-  top: 100px;
+  top: 40px;
   height: 50px;
-  border: 1px solid gray;
-  background-image: linear-gradient(45deg, green, rgb(79, 238, 79));
+  border: none;
+  background: linear-gradient(45deg, #4CAF50, #45a049);
   color: white;
-  border-radius: 10px;
-  box-shadow: 1px 1px 8px black;
+  border-radius: 25px;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
   transition: all 0.3s ease;
   font-size: 30px;
+  font-family: "Comfortaa";
+  cursor: pointer;
 }
 
 .auth_btn:hover{
-    box-shadow: 0px 0px 10px black;
-    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+}
+
+.password-label {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.eye-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+    transform: translateY(-4px);
 }
