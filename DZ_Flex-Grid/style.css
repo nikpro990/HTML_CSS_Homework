@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 1rem;
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+}
+
+.products h2 {
+    margin-bottom: 1rem;
+}
+
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    flex: 1 1 200px;
+    background-color: #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.big {
+    flex: 2 1 400px;
+}
+
+.sale {
+    align-self: flex-end;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+}
