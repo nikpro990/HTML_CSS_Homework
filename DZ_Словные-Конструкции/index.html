@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи по JavaScript</title>
+</head>
+<body>
+        <button id="btn-t1">1. Проверка возраста</button>
+        <button id="btn-t2">2. Сравнение a и b</button>
+        <button id="btn-t3">3. Проверка температуры</button>
+        <button id="btn-t4">4. Проверка чётности</button>
+        <button id="btn-t5">5. Проверка пароля</button>
+        <button id="btn-t6">6. Определение оценки</button>
+        <button id="btn-t7">7. Проверка времени суток</button>
+        <button id="btn-t8">8. Вход по билетам</button>
+        <button id="btn-t9">9. Калькулятор</button>
+        <button id="btn-t10">10. День недели (switch)</button>
+        <button id="btn-t11">11. Сезон по месяцу (switch)</button>
+        <button id="btn-t12">12. Меню кафе (switch)</button>
+        <button id="btn-t13">13. Логин и роль</button>
+        <button id="btn-t14">14. Проверка покупателя (Скидка)</button>
+        <button id="btn-t15">15. Проверка ввода числа</button>
+        <button id="btn-t16">16. Сравнение строк и чисел</button>
+        <button id="btn-t17">17. Проверка возраста с приведением</button>
+        <button id="btn-t18">18. Проверка пустой строки</button>
+        <button id="btn-t19">19. Проверка boolean "false"</button>
+        <button id="btn-t20">20. Преобразование перед сравнением</button>
+
+   <script>
+     const btnT1 = document.getElementById("btn-t1");
+     const btnT2 = document.getElementById("btn-t2");
+     const btnT3 = document.getElementById("btn-t3");
+     const btnT4 = document.getElementById("btn-t4");
+     const btnT5 = document.getElementById("btn-t5");
+     const btnT6 = document.getElementById("btn-t6");
+     const btnT7 = document.getElementById("btn-t7");
+     const btnT8 = document.getElementById("btn-t8");
+     const btnT9 = document.getElementById("btn-t9");
+     const btnT10 = document.getElementById("btn-t10");
+     const btnT11 = document.getElementById("btn-t11");
+     const btnT12 = document.getElementById("btn-t12");
+     const btnT13 = document.getElementById("btn-t13");
+     const btnT14 = document.getElementById("btn-t14");
+     const btnT15 = document.getElementById("btn-t15");
+     const btnT16 = document.getElementById("btn-t16");
+     const btnT17 = document.getElementById("btn-t17");
+     const btnT18 = document.getElementById("btn-t18");
+     const btnT19 = document.getElementById("btn-t19");
+     const btnT20 = document.getElementById("btn-t20");
+
+     btnT1.addEventListener("click", function() { runTask("1. Проверка возраста", task1_func); });
+     btnT2.addEventListener("click", function() { runTask("2. Сравнение a и b", task2_func); });
+     btnT3.addEventListener("click", function() { runTask("3. Проверка температуры", task3_func); });
+     btnT4.addEventListener("click", function() { runTask("4. Проверка чётности", task4_func); });
+     btnT5.addEventListener("click", function() { runTask("5. Проверка пароля", task5_func); });
+     btnT6.addEventListener("click", function() { runTask("6. Определение оценки", task6_func); });
+     btnT7.addEventListener("click", function() { runTask("7. Проверка времени суток", task7_func); });
+     btnT8.addEventListener("click", function() { runTask("8. Вход по билетам", task8_func); });
+     btnT9.addEventListener("click", function() { runTask("9. Калькулятор", task9_func); });
+     btnT10.addEventListener("click", function() { runTask("10. День недели", task10_func); });
+     btnT11.addEventListener("click", function() { runTask("11. Сезон по месяцу", task11_func); });
+     btnT12.addEventListener("click", function() { runTask("12. Меню кафе", task12_func); });
+     btnT13.addEventListener("click", function() { runTask("13. Логин и роль", task13_func); });
+     btnT14.addEventListener("click", function() { runTask("14. Проверка покупателя", task14_func); });
+     btnT15.addEventListener("click", function() { runTask("15. Проверка ввода числа", task15_func); });
+     btnT16.addEventListener("click", function() { runTask("16. Сравнение строк и чисел", task16_func); });
+     btnT17.addEventListener("click", function() { runTask("17. Проверка возраста с приведением", task17_func); });
+     btnT18.addEventListener("click", function() { runTask("18. Проверка пустой строки", task18_func); });
+     btnT19.addEventListener("click", function() { runTask("19. Проверка boolean 'false'", task19_func); });
+     btnT20.addEventListener("click", function() { runTask("20. Преобразование перед сравнением", task20_func); });
+
+
+     function runTask(taskName, taskFunction) {
+         console.clear();
+         console.log(`--- Запуск задачи: ${taskName} ---`);
+         taskFunction();
+     }
+
+
+     function task1_func() {
+         let age = +prompt("Введите возраст");
+         if(age >= 18){
+             console.log("Доступ разрешён");
+         } else {
+             console.log("Доступ запрещён");
+         }
+     }
+
+     function task2_func() {
+         let a = 10;
+         let b = 7;
+         if(a > b){ console.log(a, " Больше чем ", b); } 
+         else if(a < b){ console.log(a, " Меньше чем ", b); } 
+         else { console.log(a, " Равно ", b); } 
+     }
+
+     function task3_func() {
+         let t = +prompt("Какая температура?");
+         if(t <= 0){ console.log("Мороз"); }
+         else if(t > 0 && t <= 20){ console.log("Прохладно"); }
+         else if(t >= 20){ console.log("Тепло"); }
+     }
+     
+     function task4_func() {
+         let num = +prompt("Введите число:");
+         if(num % 2 === 0){ console.log("Чётное"); }
+         else { console.log("Нечётное"); }
+     }
+     
+     function task5_func() {
+         const PASSWORD = "javascript";
+         let input = prompt("Введите пароль:");
+         if(input === PASSWORD){ console.log("Добро пожаловать!"); }
+         else { console.log("Неверный пароль!"); }
+     }
+
+     function task6_func() {
+         let score = +prompt("Введите балл (0-100):");
+         if (score >= 90) { console.log("Отлично"); } 
+         else if (score >= 75) { console.log("Хорошо"); } 
+         else if (score >= 50) { console.log("Удовлетворительно"); } 
+         else { console.log("Нужно подтянуться"); }
+     }
+     
+     function task7_func() {
+         let hour = +prompt("Введите час (0-23):");
+         if (hour >= 0 && hour <= 5) { console.log("Ночь"); } 
+         else if (hour >= 6 && hour <= 11) { console.log("Утро"); } 
+         else if (hour >= 12 && hour <= 17) { console.log("День"); } 
+         else { console.log("Вечер"); }
+     }
+     
+     function task8_func() {
+         let hasTicket = true;
+         let age = 15;
+         if (age >= 16) {
+             if (hasTicket) { console.log("Можно войти"); } 
+             else { console.log("Купи билет"); }
+         } else { console.log("Вход только с родителями"); }
+     }
+     
+     function task9_func() {
+         let a = 10;
+         let b = 5;
+         let operator = prompt("Введите оператор (+, -, *, /):");
+         let result;
+         switch (operator) {
+             case "+": result = a + b; break;
+             case "-": result = a - b; break;
+             case "*": result = a * b; break;
+             case "/": result = a / b; break;
+             default: console.log("Неверный оператор"); return;
+         }
+         console.log(`Результат: ${result}`);
+     }
+
+     function task10_func() {
+         let day = +prompt("Введите день недели числом (1-7):");
+         switch (day) {
+             case 1: console.log("Понедельник"); break;
+             case 2: console.log("Вторник"); break;
+             case 3: console.log("Среда"); break;
+             case 4: console.log("Четверг"); break;
+             case 5: console.log("Пятница"); break;
+             case 6: console.log("Суббота"); break;
+             case 7: console.log("Воскресенье"); break;
+             default: console.log("Неверный день недели");
+         }
+     }
+
+     function task11_func() {
+         let month = +prompt("Введите номер месяца (1-12):");
+         switch (month) {
+             case 12: case 1: case 2: console.log("Зима"); break;
+             case 3: case 4: case 5: console.log("Весна"); break;
+             case 6: case 7: case 8: console.log("Лето"); break;
+             case 9: case 10: case 11: console.log("Осень"); break;
+             default: console.log("Неверный месяц");
+         }
+     }
+
+     function task12_func() {
+         let drink = prompt("Выберите напиток (tea, coffee, juice):");
+         switch (drink) {
+             case "tea": console.log("Вы выбрали чай"); break;
+             case "coffee": console.log("Вы выбрали кофе"); break;
+             case "juice": console.log("Вы выбрали сок"); break;
+             default: console.log("Такого напитка нет");
+         }
+     }
+     
+     function task13_func() {
+         let isLoggedIn = true;
+         let role = "admin";
+         if (!isLoggedIn) { console.log("Войдите в систему"); } 
+         else if (role === "admin") { console.log("Добро пожаловать, админ"); } 
+         else { console.log("Здравствуйте, пользователь"); }
+     }
+
+     function task14_func() {
+         let total = 350;
+         let isVIP = false;
+         let discount = 0;
+         if (isVIP) { discount = 0.20; } 
+         else if (total >= 500) { discount = 0.15; } 
+         else if (total >= 200) { discount = 0.10; }
+         let finalPrice = total * (1 - discount);
+         console.log(`Итоговая цена: ${finalPrice.toFixed(2)}`);
+     }
+
+     function task15_func() {
+         let num = Number(prompt("Введите число:"));
+         if (isNaN(num)) { console.log("Это не число!"); } 
+         else if (num > 0) { console.log("Положительное"); } 
+         else if (num < 0) { console.log("Отрицательное"); } 
+         else { console.log("Ноль"); }
+     }
+
+     function task16_func() {
+         console.log(`"5" == 5: ${"5" == 5}`);
+         console.log(`"5" === 5: ${"5" === 5}`);
+         console.log(`"5" + 5: ${"5" + 5}`);
+         console.log(`"5" - 5: ${"5" - 5}`);
+     }
+
+     function task17_func() {
+         let age = Number(prompt("Введите возраст:"));
+         if (age < 18) { console.log("Доступ запрещён"); } 
+         else { console.log("Проходи"); }
+     }
+
+     function task18_func() {
+         let name = prompt("Введите имя:");
+         if (!name) { console.log("Имя не введено"); } 
+         else { console.log(`Привет, ${name}!`); }
+     }
+
+     function task19_func() {
+         let isOnline = "false";
+         if (isOnline) { console.log("Пользователь в сети"); } 
+         else { console.log("Пользователь не в сети"); }
+     }
+
+     function task20_func() {
+         console.log(`"10" > 5: ${"10" > 5}`);
+         console.log(`"10" < "2": ${"10" < "2"}`);
+         console.log(`"abc" > 5: ${"abc" > 5}`);
+         console.log(`true == 1: ${true == 1}`);
+         console.log(`false == 0: ${false == 0}`);
+     }
+    </script>
+</body>
+</html>
